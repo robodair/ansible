@@ -95,6 +95,7 @@ options:
       C(HKLM:Software\Microsoft\Windows\CurrentVersion\Uninstall) or for 32 bit
       programs at
       C(HKLM:Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall).
+      or by using the powershell one-liner C(get-wmiobject Win32_Product | Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize)
     - This SHOULD be set when the package is not an MSI, or the path is a url
       or a network share and credential delegation is not being used. The
       C(creates_*) options can be used instead but is not recommended.
